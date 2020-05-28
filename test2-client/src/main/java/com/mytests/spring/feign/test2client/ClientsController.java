@@ -17,4 +17,9 @@ public class ClientsController {
     public String hello(@PathVariable String name){
       return test22.hello(name);
     }
+
+    @GetMapping("/client1/bar")
+    public String m1(){
+        return test2.m1();
+    }
 }

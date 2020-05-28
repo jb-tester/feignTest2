@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "my.feign.client1.name",
+      "type": "java.lang.String",
+      "description": "Description for my.feign.client1.name."
+    },
+    {
+      "name": "my.feign.client1.url",
+      "type": "java.lang.String",
+      "description": "Description for my.feign.client1.url."
+    }
+  ] }

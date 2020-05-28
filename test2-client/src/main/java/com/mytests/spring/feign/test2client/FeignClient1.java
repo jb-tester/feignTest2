@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * Project: feignTest2
  * *******************************
  */
-@FeignClient(name = "test2", url = "http://localhost:8081/test2/api")
+@FeignClient(name = "${my.feign.client1.name}", url = "${my.feign.client1.url}")
 public interface FeignClient1 {
     
     @GetMapping("c1/bar")
