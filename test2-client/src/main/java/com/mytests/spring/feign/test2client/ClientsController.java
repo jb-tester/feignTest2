@@ -1,18 +1,21 @@
 package com.mytests.spring.feign.test2client;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 @RestController
 public class ClientsController {
 
     @Autowired
     private FeignClient2 test22;
-    @Autowired
+    @Autowired @Qualifier("client1")
     private FeignClient1 test21;
-    @Autowired
+    @Resource(name = "client3")
     private FeignClient3 test23;
 
 
