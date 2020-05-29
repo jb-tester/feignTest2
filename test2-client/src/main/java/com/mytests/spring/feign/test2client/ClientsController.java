@@ -11,7 +11,10 @@ public class ClientsController {
     @Autowired
     private FeignClient2 test22;
     @Autowired
-    private FeignClient1 test2;
+    private FeignClient1 test21;
+    @Autowired
+    private FeignClient3 test23;
+
 
     @GetMapping("/client2/hello/{name}")
     public String hello(@PathVariable String name){
@@ -20,6 +23,11 @@ public class ClientsController {
 
     @GetMapping("/client1/bar")
     public String m1(){
-        return test2.m1();
+        return test21.m1();
+    }
+
+    @GetMapping("/client3/boo")
+    public String boo(){
+        return test23.boo();
     }
 }
