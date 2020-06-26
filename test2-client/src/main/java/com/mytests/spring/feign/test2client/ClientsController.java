@@ -13,24 +13,33 @@ public class ClientsController {
 
     @Autowired
     private FeignClient2 test22;
-    @Autowired @Qualifier("client1")
+    @Autowired
+    private FeignClient4 test24;
+
+    @Autowired
+    @Qualifier("client1")
     private FeignClient1 test21;
     @Resource(name = "client3")
     private FeignClient3 test23;
 
 
     @GetMapping("/client2/hello/{name}")
-    public String hello(@PathVariable String name){
-      return test22.hello(name);
+    public String hello(@PathVariable String name) {
+        return test22.hello(name);
     }
 
     @GetMapping("/client1/bar")
-    public String m1(){
+    public String m1() {
         return test21.m1();
     }
 
     @GetMapping("/client3/boo")
-    public String boo(){
+    public String boo() {
         return test23.boo();
+    }
+
+    @GetMapping("/client4/boo")
+    public String boo4() {
+        return test24.boo();
     }
 }
