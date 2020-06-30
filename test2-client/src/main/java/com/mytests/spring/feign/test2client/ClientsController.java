@@ -15,6 +15,8 @@ public class ClientsController {
     private FeignClient2 test22;
     @Autowired
     private FeignClient4 test24;
+    @Autowired
+    private FeignClient5 test25;
 
     @Autowired
     @Qualifier("client1")
@@ -41,5 +43,20 @@ public class ClientsController {
     @GetMapping("/client4/boo")
     public String boo4() {
         return test24.boo();
+    }
+
+    @GetMapping("/client5/boo")
+    public String client51() {
+        return test25.boo();
+    }
+
+    @GetMapping("/client5/zoo")
+    public String client52() {
+        return test25.zoo();
+    }
+
+    @GetMapping("/client5/bar")
+    public String client53() {
+        return test25.bar();
     }
 }
